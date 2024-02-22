@@ -1,0 +1,124 @@
+/*
+Author: Wanda Azhar
+Location: Michigan, USA
+Contact: wandaazhar@gmail.com
+*/
+
+@import './responsive.scss';
+@import './variable.scss';
+
+html {
+  font-size: 62.5%;
+
+  @include largePhone {
+    font-size: 52.5%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::selection {
+  // background-color: $colorBackgroundDark;
+  // color: $colorBackgroundLight;
+}
+
+a {
+  text-decoration: none;
+  columns: inherit;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+
+}
+
+.main {
+  background: $mainBackground;
+
+  .globalContainer {
+    border: .1rem solid salmon;
+    // background: rgb(238, 174, 202);
+    margin: 0 auto;
+    max-width: 90%;
+
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 95vh;
+      // border: .1rem solid salmon;
+
+      .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem;
+        // border: .1rem solid grey;
+        // height: 450px;
+        // max-width: fit-content;
+        width: 40rem;
+        border-radius: 1rem;
+        background: $white;
+        // opacity: .2;
+        // filter: blur(1px);
+        box-shadow: $boxShadow;
+        position: relative;
+      }
+    }
+  }
+}
+
+.wrapSvgNav {
+  width: 100%;
+  max-width: 133.4rem;
+  margin: 0 auto;
+  position: relative;
+  // overflow: hidden;
+  // height: 20rem;
+  // border: .1rem solid salmon;
+
+
+  @include largePhone {
+    position: static;
+    // border: .1rem solid salmon;
+  }
+
+  .svgNav {
+    position: absolute;
+    // top: 5rem;
+    z-index: -99;
+
+
+    @include largePhone {
+      top: 2rem;
+    }
+
+    // @include largePhone {
+    //   top: 9rem;
+    // }
+
+    img {
+      filter: drop-shadow(1px 5px 2px rgb(0 0 0 / 0.2));
+      object-fit: fill;
+      width: 100%;
+      // border: .1rem solid green;
+    }
+  }
+}
+
+.footer {
+  background: $white;
+  color: $labelForm;
+  height: 5vh;
+  font-size: 1.4rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+}

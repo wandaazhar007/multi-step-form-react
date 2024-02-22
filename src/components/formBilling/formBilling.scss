@@ -1,0 +1,19 @@
+.same {
+
+  span {
+    font-size: 1.4rem;
+    color: grey;
+    margin-left: .6rem;
+  }
+
+  .customCheckbox input[type='checkbox'] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #999;
+    border-radius: 50%;
+    outline: none;
+    box-shadow: 0 0 5px #999;
+    transition: box-shadow 0.3s ease;
+  }
+}
