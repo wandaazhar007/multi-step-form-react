@@ -4,7 +4,7 @@ function clearNumber(value = "") {
   return value.replace(/\D+/g, "");
 }
 
-export function formatCreditCardNumber(value) {
+export function formatCreditCardNumber(value: any) {
   if (!value) {
     return value;
   }
@@ -37,19 +37,19 @@ export function formatCreditCardNumber(value) {
   return nextValue.trim();
 }
 
-export function formatCVC(value, prevValue, allValues = {}) {
-  const clearValue = clearNumber(value);
-  let maxLength = 4;
+// export function formatCVC(value: any, prevValue: number, allValues = {}) {
+//   const clearValue = clearNumber(value);
+//   let maxLength = 4;
 
-  if (allValues.number) {
-    const issuer = Payment.fns.cardType(allValues.number);
-    maxLength = issuer === "amex" ? 4 : 3;
-  }
+//   if (allValues.number) {
+//     const issuer = Payment.fns.cardType(allValues.number);
+//     maxLength = issuer === "amex" ? 4 : 3;
+//   }
 
-  return clearValue.slice(0, maxLength);
-}
+//   return clearValue.slice(0, maxLength);
+// }
 
-export function formatExpirationDate(value) {
+export function formatExpirationDate(value: any) {
   const clearValue = clearNumber(value);
 
   if (clearValue.length >= 3) {

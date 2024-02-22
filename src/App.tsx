@@ -1,6 +1,5 @@
 import FormContainer from "./components/formContainer/FormContainer";
 import "./styles/globals.scss";
-import waves5 from '../public/wave5.svg';
 
 function App() {
 
