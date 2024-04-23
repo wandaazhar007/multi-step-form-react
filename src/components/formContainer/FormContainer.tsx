@@ -12,11 +12,7 @@ const FormContainer: React.FC = () => {
   const [page, setPage] = useState(0);
   const FormTitles = ["Personal Info", "Shipping Address", "Billing Address", "Payment"];
 
-  // let dataFromLocalStorage = [];
-  // useEffect(() => {
   const dataFromLocalStorage = JSON.parse(localStorage.getItem('form_data')!);
-  // console.log(dataFromLocalStorage);
-
 
   const [formData, setFormData] = useState(dataFromLocalStorage || {
     name: "",
