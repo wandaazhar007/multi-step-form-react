@@ -16,4 +16,11 @@ Contact: wandaazhar@gmail.com
   justify-content: center;
   align-items: center;
   display: flex;
+
+  p {
+    a {
+      font-weight: 600;
+      color: grey;
+    }
+  }
 }
