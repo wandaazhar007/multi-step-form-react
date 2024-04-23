@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import FormInfo from "../formInfo/FormInfo";
 import FormShipping from "../formShipping/FormShipping";
 import FormBilling from "../formBilling/formBilling";
-import FormPayment from "../formPayment/FormPayment";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import './formContainer.scss';
 import '../../styles/inputStyles.scss';
+import FormPayment2 from "../formPayment2/FormPayment2";
 
 const FormContainer: React.FC = () => {
   const [page, setPage] = useState(0);
@@ -49,7 +49,7 @@ const FormContainer: React.FC = () => {
     } else if (page === 2) {
       return <FormBilling formData={formData} setFormData={setFormData} />
     } else {
-      return <FormPayment formData={formData} setFormData={setFormData} />
+      return <FormPayment2 formData={formData} setFormData={setFormData} />
     }
   }
   return (
