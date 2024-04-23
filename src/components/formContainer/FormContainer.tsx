@@ -4,7 +4,7 @@ import FormShipping from "../formShipping/FormShipping";
 import FormBilling from "../formBilling/formBilling";
 import FormPayment from "../formPayment/FormPayment";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import './formContainer.scss';
 import '../../styles/inputStyles.scss';
 
@@ -55,8 +55,8 @@ const FormContainer: React.FC = () => {
   return (
     <>
       <div className="step">
-        <div className={`stepItem ${page === 0 || formData.name === "wanda" ? "active" : ""} `}> Step 1</div>
-        <div className={`stepItem ${page === 1 && formData.name === "test" ? "active" : ""} `}> Step 2</div>
+        <div className={`stepItem ${page === 0 ? "active" : ""} `}> Step 1</div>
+        <div className={`stepItem ${page === 1 ? "active" : ""} `}> Step 2</div>
         <div className={`stepItem ${page === 2 ? "active" : ""} `}> Step 3</div>
         <div className={`stepItem ${page === 3 ? "active" : ""} `}> Step 4</div>
       </div>
@@ -77,12 +77,13 @@ const FormContainer: React.FC = () => {
             className="prev"
             onClick={() => setPage((current) => current - 1)}
           >
-            <FontAwesomeIcon icon={faArrowLeft} /> Prev
+            <FontAwesomeIcon icon={faChevronLeft} className="icon" /> Prev
           </button>
           <button
             className="next"
-            onClick={() => setPage((current) => current + 1)}>
-            Next <FontAwesomeIcon icon={faArrowRight} />
+            onClick={() => setPage((current) => current + 1)}
+          >
+            Next <FontAwesomeIcon icon={faChevronRight} className="icon" />
           </button>
         </div>
       </div>

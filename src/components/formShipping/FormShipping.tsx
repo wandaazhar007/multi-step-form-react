@@ -2,7 +2,7 @@
 const FormShipping = ({ formData, setFormData }: any) => {
   return (
     <>
-      <div className="wrapInputGroup">
+      <div className="wrapShipping">
         <div className="inputGroup input1">
           <label htmlFor="street">Street</label>
           <input
