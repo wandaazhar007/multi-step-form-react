@@ -9,17 +9,14 @@ Contact: wandaazhar@gmail.com
 
 .step {
   width: 100%;
-  height: 5rem;
+  height: 3rem;
   position: absolute;
-  top: -9rem;
-  // border-radius: 1rem;
-  // border: .1rem solid salmon;
+  top: -5rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: .5rem;
 
   .stepItem {
-    // border: .1rem solid green;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,12 +25,12 @@ Contact: wandaazhar@gmail.com
     cursor: not-allowed;
     font-size: 1.6rem;
     font-weight: 500;
-    color: #b5b4b4;
+    color: #fff;
 
     &.active {
-      background: $stepBackground;
+      background: $backgroundBlue;
       cursor: pointer;
-      color: #fff;
+      // color: #fff;
     }
 
   }
@@ -42,15 +39,15 @@ Contact: wandaazhar@gmail.com
 .progressBar {
   position: absolute;
   width: 100%;
-  height: 2rem;
-  background: $white;
+  height: 1rem;
+  // background: $white;
   border-radius: 1rem;
-  top: -3rem;
+  top: -1rem;
   overflow: hidden;
 
   .progress {
     height: 2rem;
-    background: #ADB7E1;
+    background: $backgroundBlue;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,7 +69,6 @@ Contact: wandaazhar@gmail.com
 }
 
 .body {
-  // border: .1rem solid salmon;
   width: 100%;
 }
 
@@ -86,11 +82,16 @@ Contact: wandaazhar@gmail.com
       padding: 1rem 1rem;
       border-radius: .4rem;
       border: transparent;
-      background-color: #dce2e0;
+      background: $backgroundBlue;
+      color: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
+      display: flex;
+      gap: .5rem;
+      align-items: center;
+      justify-content: center;
     }
 
     .next {
@@ -98,11 +99,16 @@ Contact: wandaazhar@gmail.com
       padding: 1rem 1rem;
       border-radius: .4rem;
       border: transparent;
-      background-color: #dce2e0;
+      background: $backgroundBlue;
+      color: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
+      display: flex;
+      gap: .5rem;
+      align-items: center;
+      justify-content: center;
     }
   }
 }
