@@ -18,11 +18,6 @@ function App() {
           </div>
         </section>
       </main>
-      {/* <div className="wrapSvgNav">
-        <div className="svgNav">
-          <img src={waves5} width={100} height={100} alt='l' />
-        </div>
-      </div> */}
       <Footer />
     </>
 
