@@ -36,7 +36,8 @@ const FormBilling = ({ formData, setFormData }: any) => {
           className="costumCheckbox"
           onChange={handleClick}
           checked={formData.checked}
-        /> <span>Same as shipping address</span>
+        />
+        <span>Same as shipping address</span>
       </div>
       <div className="wrapBilling">
         <div className="inputGroup input1">
