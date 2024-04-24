@@ -7,6 +7,15 @@ Contact: wandaazhar@gmail.com
 @import '../../styles/responsive.scss';
 @import '../../styles/variable.scss';
 
+.titleMain {
+  position: absolute;
+  top: -13rem;
+
+  img {
+    width: 15rem;
+  }
+}
+
 .step {
   width: 100%;
   height: 3rem;
@@ -28,7 +37,7 @@ Contact: wandaazhar@gmail.com
     color: #fff;
 
     &.active {
-      background: $backgroundBlue;
+      background: $backgroundBtn;
       cursor: pointer;
       // color: #fff;
     }
@@ -47,7 +56,7 @@ Contact: wandaazhar@gmail.com
 
   .progress {
     height: 2rem;
-    background: $backgroundBlue;
+    background: $backgroundBtn;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,7 +91,7 @@ Contact: wandaazhar@gmail.com
       padding: 1rem 1rem;
       border-radius: .4rem;
       border: transparent;
-      background: $backgroundBlue;
+      background: $backgroundBtn;
       color: #fff;
       display: flex;
       align-items: center;
@@ -94,12 +103,29 @@ Contact: wandaazhar@gmail.com
       justify-content: center;
     }
 
+    .btnDisable {
+      width: 7rem;
+      padding: 1rem 1rem;
+      border-radius: .4rem;
+      border: transparent;
+      background: #c9c9c9;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: not-allowed;
+      display: flex;
+      gap: .5rem;
+      align-items: center;
+      justify-content: center;
+    }
+
     .next {
       width: 7rem;
       padding: 1rem 1rem;
       border-radius: .4rem;
       border: transparent;
-      background: $backgroundBlue;
+      background: $backgroundBtn;
       color: #fff;
       display: flex;
       align-items: center;

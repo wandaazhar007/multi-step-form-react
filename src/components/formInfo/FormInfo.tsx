@@ -1,16 +1,6 @@
+import { formatPhoneNumber } from "../../utils/Utils";
+
 const FormInfo = ({ formData, setFormData }: any) => {
-
-  const formatPhoneNumber = (value: string) => {
-    if (!value) return value;
-    const phoneNumber = value.replace(/[^\d]/g, "");
-    const phoneNumberLength = phoneNumber.length;
-    if (phoneNumberLength < 4) return phoneNumber;
-    if (phoneNumberLength < 7) {
-      return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3)}`;
-    }
-    return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3, 6)}-${phoneNumber.slice(6, 10)}`;
-  }
-
   return (
     <>
       <div className="wrapInfo">
@@ -35,7 +25,6 @@ const FormInfo = ({ formData, setFormData }: any) => {
         </div>
         <div className="inputGroup">
           <label htmlFor="phone">Phone Number</label>
-          {/* <PhoneNumberInput /> */}
           <input
             type="text"
             className="formControl"
