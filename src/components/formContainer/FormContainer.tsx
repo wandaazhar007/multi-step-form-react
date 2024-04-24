@@ -10,7 +10,7 @@ import FormPayment2 from "../formPayment2/FormPayment2";
 
 const FormContainer: React.FC = () => {
   const [page, setPage] = useState(0);
-  const FormTitles = ["Personal Info", "Shipping Address", "Billing Address", "Payment"];
+  const FormTitles = ["Personal Info", "Shipping Address", "Billing Address", "Payment Method"];
 
   const dataFromLocalStorage = JSON.parse(localStorage.getItem('form_data')!);
 
@@ -54,6 +54,9 @@ const FormContainer: React.FC = () => {
   }
   return (
     <>
+      <div className="titleMain">
+        <img src="/amazon-logo.png" alt="amazon logo" />
+      </div>
       <div className="step">
         <div className={`stepItem ${page === 0 ? "active" : ""} `}> Step 1</div>
         <div className={`stepItem ${page === 1 ? "active" : ""} `}> Step 2</div>
@@ -73,18 +76,45 @@ const FormContainer: React.FC = () => {
       </div>
       <div className="footer">
         <div className="groupButton">
-          <button
-            className="prev"
-            onClick={() => setPage((current) => current - 1)}
-          >
-            <FontAwesomeIcon icon={faChevronLeft} className="icon" /> Prev
-          </button>
-          <button
-            className="next"
-            onClick={() => setPage((current) => current + 1)}
-          >
-            Next <FontAwesomeIcon icon={faChevronRight} className="icon" />
-          </button>
+          {page < 1 ? (
+            <>
+              <button
+                className="btnDisable"
+                disabled
+              >
+                Prev
+              </button>
+            </>
+          ) : (
+            <>
+              <button
+                className="prev"
+                onClick={() => setPage((current) => current - 1)}
+              >
+                <FontAwesomeIcon icon={faChevronLeft} className="icon" /> Prev
+              </button>
+            </>
+          )}
+
+          {page > 2 ? (
+            <>
+              <button
+                className="btnDisable"
+                disabled
+              >
+                Prev
+              </button>
+            </>
+          ) : (
+            <>
+              <button
+                className="prev"
+                onClick={() => setPage((current) => current + 1)}
+              >
+                Next <FontAwesomeIcon icon={faChevronRight} className="icon" />
+              </button>
+            </>
+          )}
         </div>
       </div>
 

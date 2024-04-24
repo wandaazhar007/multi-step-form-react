@@ -1,5 +1,3 @@
-import './formBilling.scss';
-
 const FormBilling = ({ formData, setFormData }: any) => {
 
   const handleClick = () => {

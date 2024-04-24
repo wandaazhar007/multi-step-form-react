@@ -32,8 +32,6 @@ body {
 }
 
 .main {
-  // background: $mainBackground;
-
   .globalContainer {
     margin: 0 auto;
     max-width: 90%;
@@ -55,7 +53,6 @@ body {
         border-radius: 1rem;
         // background: $mainBackground;
         box-shadow: rgba(29, 29, 44, 0.15) 0px 0px 85px 10px;
-        // border: .1rem solid salmon;
         position: relative;
       }
     }
