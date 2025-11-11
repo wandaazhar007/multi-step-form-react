@@ -163,3 +163,23 @@ Contact: wandaazhar@gmail.com
     }
   }
 }
+
+.formControl {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  &.hasError {
+    border-color: $error;
+    box-shadow: 0 0 0 2px rgba($error, 0.15);
+  }
+}
+
+.errorText {
+  font-size: 1.2rem;
+  color: $error;
+}
+
+.optional {
+  font-size: 1.2rem;
+  color: $labelForm;
+  font-weight: 400;
+}
